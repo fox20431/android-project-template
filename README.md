@@ -6,15 +6,26 @@
 
 ## 复用
 
-当你复用该项目的时候以下几个方面是你应该考虑的：
+当你复用该项目的时候以下几个方面是你应该考虑的。
 
+---
+项目根目录
 - 将`./build.gradle.kts`的`rootProject.name`修改成你的项目名
-- 将`./app/build.gradle.kts`中`android`闭包的`applicationId`字段修改为你的项目独有的，防止相同的`applicationId`安装包进行覆盖
-- `./app/src/main/AndroidManifest.xml`中`application`标签属性`android:label`应该被添加，以便于识别
 - 重置idea，你需要删除文件夹`./.idea`
 - 重置git，你需要删除文件夹`./.git`
 - 重写`./README.md`
+---
+应用模块
+- 将`./app/build.gradle.kts`中`android`闭包的`applicationId`字段修改为你的项目独有的，防止相同的`applicationId`安装包进行覆盖
+- `./app/src/main/AndroidManifest.xml`中`application`标签属性`android:label`应该被添加，以便于识别
 - 修改 `./app/` 下的包名，避免多个项目包名冲突
+---
+库模块
+
+
+## 计划
+
+- 创建一个shell脚本帮助我们完成复用操作
 
 ---
 
