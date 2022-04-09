@@ -8,11 +8,12 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        // maven { url = uri("https://maven.aliyun.com/repository/central") }
-        // maven { url = uri("https://maven.aliyun.com/repository/google") }
-        google()
-        mavenCentral()
+        maven { url = uri("https://maven.aliyun.com/repository/central") }
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        // google()
+        // mavenCentral()
     }
 }
 rootProject.name = "android-project-template"
-include("app")
+include(":app")
+include(":library")
