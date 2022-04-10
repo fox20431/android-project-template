@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "android-project-template"
 include(":app")
-include(":library")
+include(":lib")

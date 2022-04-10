@@ -14,13 +14,17 @@
 - 重置idea，你需要删除文件夹`./.idea`
 - 重置git，你需要删除文件夹`./.git`
 - 重写`./README.md`
+- 为了重写本项目的说明文档， `./README.md` 也应当被删除
 ---
 应用模块
 - 将`./app/build.gradle.kts`中`android`闭包的`applicationId`字段修改为你的项目独有的，防止相同的`applicationId`安装包进行覆盖
 - `./app/src/main/AndroidManifest.xml`中`application`标签属性`android:label`应该被添加，以便于识别
-- 修改 `./app/` 下的包名，避免多个项目包名冲突
+- 修改 `./app/` 下的包名，避免相互依赖的多个项目包名冲突，不得不提醒的是，当你更改包名的时候，你需要更改对应类下 `package` 包名
 ---
 库模块
+- 当你删除库模块时，你应该考虑应用模块对库模块的依赖。
+- 
+---
 
 
 ## 计划
